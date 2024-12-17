@@ -1,0 +1,253 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Body Styling */
+  body {
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Navbar Styling */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343a40;
+    color: white;
+    padding: 1rem 2rem;
+    border-bottom: 4px solid #f8c130; /* Border Bottom */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f8c130; /* Gold */
+  }
+  
+  nav ul {
+    list-style: none;
+    margin-left: 2rem;
+  }
+  
+  nav ul h4 {
+    font-size: 1.2rem;
+    color: #dee2e6;
+    margin-left: -190px;
+  }
+  
+  /* Search Bar */
+  .searchBar {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .searchBar input {
+    padding: 0.5rem;
+    border: 2px solid #dee2e6;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 250px;
+    transition: border-color 0.3s;
+    margin-left: -300px;
+  }
+  
+  .searchBar input:focus {
+    outline: none;
+    border-color: #f8c130;
+  }
+  
+  .searchBar button {
+    background-color: #f8c130; /* Gold */
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .searchBar button:hover {
+    background-color: #e0a800; /* Darker Gold */
+  }
+  
+  /* Center Message Styling */
+  div > p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2rem 0;
+    color: #495057;
+  }
+  
+  /* Category Buttons Styling */
+  .categoryBtn {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  
+  .categoryBtn button {
+    background-color: #343a40; /* Dark Gray */
+    color: #f8c130; /* Gold */
+    border: 2px solid #343a40;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .categoryBtn button:hover {
+    background-color: #f8c130;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Card Component Styling */
+  .card {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  
+  .card h2 {
+    font-size: 1.5rem;
+    color: #343a40;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
+  /* Container to hold cards in a grid */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background for contrast */
+  }
+  
+  /* Individual card styling */
+  .card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    overflow: hidden; /* Clip overflowing content */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  /* Card hover effect */
+  .card:hover {
+    transform: translateY(-5px); /* Lift the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  }
+  
+  /* Card image styling */
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Card content container */
+  .cardContent {
+    padding: 15px;
+    text-align: left;
+  }
+  
+  /* Title styling */
+  .cardContent a {
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007bff; /* Trendy blue */
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .cardContent a:hover {
+    color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Description styling */
+  .cardContent p {
+    font-size: 1em;
+    color: #6c757d; /* Subtle gray */
+    margin-bottom: 15px;
+  }
+  
+  /* Button styling */
+  .cardContent button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .cardContent button:hover {
+    background-color: #0056b3; /* Darker blue */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .card-container {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card img {
+      height: 150px;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .searchBar {
+      width: 100%;
+      margin-top: 1rem;
+      justify-content: space-between;
+    }
+  
+    .searchBar input {
+      width: calc(100% - 5rem);
+    }
+  
+    .categoryBtn {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+  
+    .categoryBtn button {
+      flex: 1 1 45%;
+    }
+  }
+  
